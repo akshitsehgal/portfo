@@ -11,7 +11,7 @@ def works(page_name):
     return render_template(page_name)
 
 def write_to_file(data):
-    with open('./Portfolio/database.txt',mode='a') as database:
+    with open('database.txt',mode='a') as database:
         email = data['email']
         subject = data['subject']
         message = data['message']
@@ -19,7 +19,7 @@ def write_to_file(data):
 
 
 def write_to_csv(data):
-    with open('./Portfolio/database.csv',mode='a',newline='') as database2:
+    with open('database.csv',mode='a',newline='') as database2:
         email = data['email']
         subject = data['subject']
         message = data['message']
